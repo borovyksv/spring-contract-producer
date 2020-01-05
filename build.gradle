@@ -55,6 +55,9 @@ dependencyManagement {
 
 contracts {
 	targetFramework = org.springframework.cloud.contract.verifier.config.TestFramework.JUNIT5
+	testMode = 'MockMvc'
+	baseClassForTests = 'com.example.contractproducer.BaseClass'
+	generatedTestSourcesDir = project.file('src/generatedContract')
 }
 
 test {
